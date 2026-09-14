@@ -1,11 +1,3 @@
-<?php
-// Arquivo de cadastro totalmente remodelado integrado à estética geométrica abstrata
-$mensagem = "";
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nome = htmlspecialchars($_POST['nome'] ?? '');
-    $mensagem = "Sucesso! O perfil de " . $nome . " foi gerado.";
-}
-?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -64,7 +56,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
             </section>
         </div>
+        <textarea><?php echo $mensagem ?></textarea>
     </main>
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
